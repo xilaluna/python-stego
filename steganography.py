@@ -27,8 +27,14 @@ def decode_image(path_to_png):
     pixels = decoded_image.load()
     x_size, y_size = encoded_image.size
 
-    # TODO: Using the variables declared above, replace `print(red_channel)` with a complete implementation:
-    print(red_channel)  # Start coding here!
+    for i in range(x_size):
+        for j in range(y_size):
+            redchannel_bin_num = bin(red_channel.getpixel((i, j)))
+            last_int = int(str(redchannel_bin_num)[-1:])
+            if last_int == 0:
+                pixels[i, j] = (255, 0, 0)
+            elif last_int == 1:
+                pixels[i, j] = (0, 0, 0)
 
     # DO NOT MODIFY. Save the decoded image to disk:
     decoded_image.save("decoded_image.png")
@@ -46,3 +52,6 @@ def write_text(text_to_write):
     TODO: Add docstring and complete implementation.
     """
     pass
+
+
+decode_image("./encoded_sample.png")
