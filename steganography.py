@@ -1,14 +1,3 @@
-"""
-[Day 7] Assignment: Steganography
-    - Turn in on Gradescope (https://make.sc/bew2.3-gradescope)
-    - Lesson Plan: https://tech-at-du.github.io/ACS-3230-Web-Security/#/Lessons/Steganography
-
-Deliverables:
-    1. All TODOs in this file.
-    2. Decoded sample image with secret text revealed
-    3. Your own image encoded with hidden secret text!
-"""
-# TODO: Run `pip3 install Pillow` before running the code.
 from PIL import Image, ImageDraw
 
 
@@ -54,7 +43,7 @@ def write_text(text_to_write, size):
 
 def encode_image(path_to_png, message):
     """
-    TODO: Add docstring and complete implementation.
+    Encode an image 
     """
     # Open decoded image
     decoded_image = Image.open(path_to_png)
