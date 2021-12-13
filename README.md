@@ -1,5 +1,3 @@
-# Python Steganography
-
 Encode and decode images with python
 
 ## Installation
